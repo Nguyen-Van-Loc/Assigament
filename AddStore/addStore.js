@@ -4,6 +4,7 @@ const AddStore = (props) => {
     const navigation = props.navigation;
     const route = props.route;
     const data = route.params?.list || null;
+    const [link, SetLink] = useState('');
     const [name, SetName] = useState('');
     const [address, SetAddress] = useState('');
     const [phone, SetPhone] = useState('');
@@ -23,7 +24,7 @@ const AddStore = (props) => {
         <SafeAreaView>
             <View style={{ alignItems: 'center', justifyContent: 'center' }}>
                 <Text style={{ fontSize: 20, marginTop: 10 }}>Thêm Cửa Hàng</Text>
-                <TextInput placeholder='Link Ảnh' keyboardType="url" value={name} style={{ marginTop: 10, width: 350, borderWidth: 1, padding: 10, fontSize: 16, borderRadius: 10 }} onChangeText={(text) => SetName(text)}></TextInput>
+                <TextInput placeholder='Link Ảnh' keyboardType="url" value={link} style={{ marginTop: 10, width: 350, borderWidth: 1, padding: 10, fontSize: 16, borderRadius: 10 }} onChangeText={(text) => SetLink(text)}></TextInput>
                 <TextInput placeholder='Tên Cửa Hàng' value={name} style={{ marginTop: 10, width: 350, borderWidth: 1, padding: 10, fontSize: 16, borderRadius: 10 }} onChangeText={(text) => SetName(text)}></TextInput>
                 <TextInput placeholder='Địa Chỉ' keyboardType='phone-pad' value={address} style={{ marginTop: 10, width: 350, borderWidth: 1, padding: 10, fontSize: 16, borderRadius: 10 }} onChangeText={(text) => SetAddress(text)}></TextInput>
                 <TextInput placeholder='Số Điện Thoại' value={phone} style={{ marginTop: 10, width: 350, borderWidth: 1, padding: 10, fontSize: 16, borderRadius: 10 }} onChangeText={(text) => SetPhone(text)}></TextInput>

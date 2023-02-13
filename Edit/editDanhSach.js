@@ -8,14 +8,14 @@ const Edit = (props) => {
     const [name, setName] = useState('');
     const [address, setAddress] = useState('');
     const [phone, setPhone] = useState('');
-    const [logo, setLogo] = useState('');
+    const [link, SetLink] = useState('');
     const [status, setStatus] = useState('');
     useEffect(() => {
         if(data != null){
             setName(data.name);
             setAddress(data.address);
             setPhone(data.phone);
-            setLogo(data.logo);
+            setLogo(data.link);
             setStatus(data.status);
         }
     
@@ -35,7 +35,7 @@ const Edit = (props) => {
             name: name,
             address: address,
             phone: phone,
-            logo: logo,
+            link: link,
             status: status
         };
         navigation.navigate('Store List', {editItem: newItem },true);
@@ -46,10 +46,10 @@ const Edit = (props) => {
             <TextInput
                     style={styles.input}
                     placeholder="Link"
-                    onChangeText={(text) => setLogo(text)}
+                    onChangeText={(text) => SetLink(text)}
                     keyboardType="url"
                     placeholderTextColor={'gray'}
-                    defaultValue={logo}
+                    defaultValue={link}
                 />
                 <TextInput
                     autoFocus
