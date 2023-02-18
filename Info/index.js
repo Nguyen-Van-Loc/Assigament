@@ -17,7 +17,7 @@ const Info = (props) => {
                 <Text style={{color:'#808080',fontSize:17}}>Name: <Text style={{fontSize:20,color:'black'}}>Nguyen Van Loc</Text></Text>
                 <Text style={{color:'#808080',fontSize:17}}>Msv: <Text style={{fontSize:20,color:'black'}}>Ph20710</Text></Text>
             </View>
-            <View style={{width:100, alignItems:'center'}}>
+            <View style={{width:'100%', alignItems:'center',justifyContent:'center'}}>
                 <Button title='Store'
                 onPress={()=>props.navigation.navigate('Store List')}>
                 </Button>

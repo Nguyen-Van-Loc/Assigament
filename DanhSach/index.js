@@ -76,7 +76,7 @@ const DanhSach = (props) => {
         status: "Open"
     }])
     useEffect(() => {
-        fetch('http://localhost:8000/user')
+        fetch('https://raw.githubusercontent.com/Nguyen-Van-Loc/Assigament/master/db.json')
         .then((response) => response.json())
         .then((json)=>SetData(json.user))
         .catch((error)=>console.error(error));
@@ -97,7 +97,7 @@ const DanhSach = (props) => {
                 }
                 return item;
             });
-            SetList(newList);
+            SetData(newList);
 
         }
     }, [route.params?.editItem])

@@ -15,7 +15,7 @@ const Edit = (props) => {
             setName(data.name);
             setAddress(data.address);
             setPhone(data.phone);
-            setLogo(data.link);
+            SetLink(data.link);
             setStatus(data.status);
         }
     
